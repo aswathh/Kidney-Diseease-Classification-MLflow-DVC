@@ -1,4 +1,4 @@
-import setuptools
+from setuptools import find_packages, setup
 
 with open("README.md", "r", encoding="utf-8") as f:
     long_description = f.read()
@@ -11,8 +11,7 @@ AUTHOR_USER_NAME = "Aswath Kumar"
 SRC_REPO = "cnnClassifier"
 AUTHOR_EMAIL = "aswathkumar2001@gmail.com"
 
-
-setuptools.setup(
+setup(
     name=SRC_REPO,
     version=__version__,
     author=AUTHOR_USER_NAME,
@@ -25,5 +24,5 @@ setuptools.setup(
         "Bug Tracker": f"https://github.com/{AUTHOR_USER_NAME}/{REPO_NAME}/issues",
     },
     package_dir={"": "src"},
-    packages=setuptools.find_packages(where="src")
+    packages=find_packages(where="src")
 )

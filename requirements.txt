@@ -18,3 +18,4 @@ Flask
 Flask-Cors
 gdown
 -e .
+setuptools
