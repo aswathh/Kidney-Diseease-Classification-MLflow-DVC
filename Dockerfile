@@ -1,9 +1,17 @@
-FROM python:3.10-slim
+FROM python:3.9-slim
+
+RUN apt update -y && apt install -y \
+    awscli \
+    gcc \
+    python3-dev \
+    libgl1 \
+    libglib2.0-0
 
 WORKDIR /app
 
-COPY requirements.txt .
-RUN pip install -r requirements.txt
+COPY . /app
+RUN pip install --upgrade pip
+RUN pip install --no-cache-dir -r requirements.txt
 
 COPY setup.py .
 RUN pip install -e .
