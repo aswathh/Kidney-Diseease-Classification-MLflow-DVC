@@ -1,6 +1,12 @@
-FROM python:3.8-slim-buster
+FROM python:3.9-slim
 
-RUN apt update -y && apt install awscli -y
+RUN apt update -y && apt install -y \
+    awscli \
+    gcc \
+    python3-dev \
+    libgl1-mesa-glx \
+    libglib2.0-0
+    
 WORKDIR /app
 
 COPY . /app
