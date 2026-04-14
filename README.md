@@ -12,3 +12,6 @@ Update the pipeline
 Update the main.py
 Update the dvc.yaml
 app.py
+
+
+ECR URI : 148617059235.dkr.ecr.ap-southeast-2.amazonaws.com/kidney
