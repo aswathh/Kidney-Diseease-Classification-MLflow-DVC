@@ -13,9 +13,6 @@ COPY . /app
 RUN pip install --upgrade pip
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY setup.py .
-RUN pip install -e .
 
-COPY . .
 
 CMD ["python3", "app.py"]
